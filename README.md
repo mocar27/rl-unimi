@@ -49,13 +49,13 @@ Try different museum topologies by inserting “walls” between cells.
 - [x] Model the policy of the adversary (Thief) as follows: 
   - at each round the adversary computes the shortest path to the target room using the modified costs defined below; 
   - then moves to the next cell in the shortest path or stays in the same cell, if he cannot move 
-  (The modified cost to move to any neighboring room is **1+𝛃*2^{-(n-1)}**), 
-  where **n is the number of rounds since the room was last selected by the surveillance algorithm** and **𝛃 is a “prudence” constant**. 
+  (The modified cost to move to any neighboring room is $1+ \beta \cdot 2^{-(n-1)}$), 
+  where **n is the number of rounds since the room was last selected by the surveillance algorithm** and $\beta$ is a **“prudence” constant**. 
   - After stealing the painting, the Thief’s new target becomes the initial room.
 
 - [x] Model the surveillance algorithm as an Agent that selects a room at each round, 
-using a stateless tabular **Softmax policy**: each action (room) has a real parameter **θ(a)** and the action probability 
-is proportional to **exp(θ(a)/𝛕)**, where **𝛕>0 is a scalar temperature**.
+using a stateless tabular **Softmax policy**: each action (room) has a real parameter $\theta(a)$ and the action probability 
+is proportional to $exp(\theta(a)/\tau)$, where $\tau>0$ is a **scalar temperature**.
 
 - [ ] Train the surveillance Agent using a **policy gradient** method of choice on repeated episodes (“heists”) 
 and devise a way to evaluate the Agent’s performance.
