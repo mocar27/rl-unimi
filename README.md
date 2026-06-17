@@ -63,11 +63,11 @@ and devise a way to evaluate the Agent’s performance.
 - [x] Visualize how the learned action probability is distributed across the rooms (e.g. using a heatmap). 
 - [ ] Discuss how the museum topology (try different ones), policy temperature, and the Thief’s prudence affect the action distribution.
 
-**Challenging Variants**
+~~**Challenging Variants**~~
 
-- [ ] Make the adversary also adaptive, for example by making the prudence parameter 𝛃 learnable.
-- [ ] Make the policy state-dependent by modeling an “alert” state carrying information on whether a missing artwork 
-has been detected by the guard and in which room.
+- ~~[ ] Make the adversary also adaptive, for example by making the prudence parameter 𝛃 learnable.~~
+- ~~[ ] Make the policy state-dependent by modeling an “alert” state carrying information on whether a missing artwork 
+has been detected by the guard and in which room.~~
 
 ## Submission information
 
