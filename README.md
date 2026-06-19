@@ -57,11 +57,11 @@ Try different museum topologies by inserting “walls” between cells.
 using a stateless tabular **Softmax policy**: each action (room) has a real parameter $\theta(a)$ and the action probability 
 is proportional to $exp(\theta(a)/\tau)$, where $\tau>0$ is a **scalar temperature**.
 
-- [ ] Train the surveillance Agent using a **policy gradient** method of choice on repeated episodes (“heists”) 
+- [x] Train the surveillance Agent using a **policy gradient** method of choice on repeated episodes (“heists”) 
 and devise a way to evaluate the Agent’s performance.
 
 - [x] Visualize how the learned action probability is distributed across the rooms (e.g. using a heatmap). 
-- [ ] Discuss how the museum topology (try different ones), policy temperature, and the Thief’s prudence affect the action distribution.
+- [x] Discuss how the museum topology (try different ones), policy temperature, and the Thief’s prudence affect the action distribution.
 
 ~~**Challenging Variants**~~
 

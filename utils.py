@@ -59,15 +59,19 @@ def plot_museum_heatmap(env, agent, strat):
     plt.show()
 
 # Plots the Agent's winrate over the course of training.
-def plot_learning_curve(win_rate_history, strat):
+def plot_learning_curve(win_rate_history, strat, e_win_rate):
     plt.figure(figsize=(8, 5))
 
     episodes_x = np.arange(1, len(win_rate_history) + 1) * 100
     win_percentages = np.array(win_rate_history) * 100
 
-    plt.plot(episodes_x, win_percentages, marker='o', linestyle='-', color='b')
+    plt.plot(episodes_x, win_percentages, marker='o', linestyle='-', color='b', label='Training Win Rate')
+    plt.axhline(y=e_win_rate, color='red', linestyle='--', linewidth=2,
+                label=f'Eval Win Rate ({e_win_rate:.1f}%)')
+
     plt.title(f"Agent Win Rate over Time, Spawn Strategy = {strat.name}")
     plt.xlabel("Episodes")
     plt.ylabel("Agent Win Rate (%)")
+    plt.legend(loc="lower right")
     plt.grid(True)
     plt.show()
